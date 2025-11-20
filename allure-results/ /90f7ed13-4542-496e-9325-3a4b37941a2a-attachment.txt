@@ -1,0 +1,2 @@
+期望返回: {'code': 2, 'msg': '用户昵称长度超过10位'}
+实际返回: {'code': 2, 'msg': '用户昵称长度超过10位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved'}

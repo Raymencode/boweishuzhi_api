@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","825","test_cart[item0]","testcase","2025-11-19","passed","2025-11-19","TestCart","测试购物车","",""
+"","490","test_cart[item1]","testcase","2025-11-19","passed","2025-11-19","TestCart","测试购物车","",""
+"","319","test_cart[item2]","testcase","2025-11-19","passed","2025-11-19","TestCart","测试购物车","",""

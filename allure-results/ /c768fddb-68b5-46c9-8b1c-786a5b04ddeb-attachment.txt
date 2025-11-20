@@ -1,0 +1,2 @@
+2022-05-07 09:01:37,158 - [test_register.py - INFO: 运行第14条用例
+2022-05-07 09:01:37,158 - [test_register.py - INFO: 测试通过

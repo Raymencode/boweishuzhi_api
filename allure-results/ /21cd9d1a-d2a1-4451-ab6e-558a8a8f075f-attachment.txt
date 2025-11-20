@@ -1,0 +1,2 @@
+期望返回: {'code': 0, 'msg': 'OK'}
+实际返回: {'code': 0, 'msg': 'OK', 'data': {'id': 274450, 'reg_name': 'steph', 'mobile_phone': '14769222431'}, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved'}

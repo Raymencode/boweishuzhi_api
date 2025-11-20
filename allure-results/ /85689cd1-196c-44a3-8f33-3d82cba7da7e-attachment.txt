@@ -1,0 +1,2 @@
+期望返回: {'code': 2, 'msg': '不支持的用户类型'}
+实际返回: {'code': 2, 'msg': '不支持的用户类型', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved'}

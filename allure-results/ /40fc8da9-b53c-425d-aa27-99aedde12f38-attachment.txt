@@ -1,0 +1,2 @@
+INFO     mylog:test_login.py:46 运行第6条用例
+INFO     mylog:test_login.py:54 用例通过

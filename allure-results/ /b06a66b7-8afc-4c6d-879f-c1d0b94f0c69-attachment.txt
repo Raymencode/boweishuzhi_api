@@ -1,0 +1,7 @@
+2022-05-07 09:01:34,562 - [test_login.py - INFO: 运行第1条用例
+2022-05-07 09:01:34,564 - [test_login.py - ERROR: 用例未通过
+2022-05-07 09:01:34,564 - [test_login.py - ERROR: assert 0 == 1001
+Traceback (most recent call last):
+  File "/Users/raymen/PycharmProjects/prectice/interface_pytest/testcase/test_login.py", line 47, in test_login
+    assert expect["code"] == response["code"]
+AssertionError: assert 0 == 1001

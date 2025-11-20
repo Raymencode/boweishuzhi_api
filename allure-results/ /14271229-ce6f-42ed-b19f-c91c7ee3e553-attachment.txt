@@ -1,0 +1,3 @@
+INFO     mylog:test_register.py:34 运行第15条用例
+INFO     mylog:test_register.py:40 测试通过
+INFO     mylog:test_register.py:43 测试通过

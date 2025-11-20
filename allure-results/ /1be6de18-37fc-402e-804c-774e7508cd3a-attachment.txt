@@ -1,0 +1,2 @@
+期望返回: {'code': 2, 'msg': '密码格式为8到16位'}
+实际返回: {'code': 2, 'msg': '密码格式为8到16位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved'}

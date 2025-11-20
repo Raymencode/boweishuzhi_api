@@ -1,0 +1,7 @@
+INFO     mylog:test_login.py:46 运行第1条用例
+ERROR    mylog:test_login.py:50 用例未通过
+ERROR    mylog:test_login.py:51 assert 0 == 1001
+Traceback (most recent call last):
+  File "/Users/raymen/PycharmProjects/prectice/interface_pytest/testcase/test_login.py", line 47, in test_login
+    assert expect["code"] == response["code"]
+AssertionError: assert 0 == 1001

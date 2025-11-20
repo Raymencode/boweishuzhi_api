@@ -1,0 +1,8 @@
+
+测试用例前置
+期望返回: {'code': 1001, 'msg': '账号信息错误'}
+实际返回: {'code': 1001, 'msg': '账号信息错误', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2019 湖南省零檬信息技术有限公司 All Rights Reserved'}
+
+测试用例后置
+
+测试类后置执行
