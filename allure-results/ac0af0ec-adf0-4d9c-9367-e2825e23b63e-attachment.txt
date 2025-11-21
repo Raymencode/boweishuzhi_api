@@ -1,0 +1,4 @@
+INFO     mylog:test_cart.py:76 *************************执行第3条用例*************************
+INFO     mylog:test_cart.py:77 期望返回: {'code': 0, 'msg': '删除成功'}
+INFO     mylog:test_cart.py:78 实际返回: {'success': 1, 'msg': '删除成功', 'code': 0, 'data': None}
+INFO     mylog:test_cart.py:90 测试通过

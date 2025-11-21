@@ -14,7 +14,7 @@ from common.handle_reg import replace_data_2
 from common.handle_path import DATA_DIR
 from common.handle_exl import HandleExel
 from common.handle_conf import conf
-
+from common.fixture import RequestHandler
 
 
 @allure.suite("测试购物车")
@@ -44,26 +44,46 @@ class TestCart():
         allure.dynamic.feature(item["interface"])
         allure.dynamic.story(item["title"])
         url = self.base_url + item["url"]
+
         # 替换测试用例中的项目id为类属性保存的id
         item["data"] = replace_data_2(item["data"], TestCart)
         params = eval(item["data"])
         expect = eval(item["expected"])
         method = item["method"].lower()
-        row = item["case_id"]+1
+        row = item["case_id"] + 1
         header = self.base_header
-        response = requests.request(method=method, url=url, json=params, headers=header, verify=False).json()
-        print(response)
-        print("期望返回: {}".format(expect))
-        print("实际返回: {}".format(response))
+
+        # 根据请求方法选择参数传递方式
+        try:
+            response = RequestHandler.send_request(
+                method=method,
+                url=url,
+                data=params,
+                headers=header,
+                verify=False
+            )
+
+            response_data = response.json()
+
+        except requests.exceptions.RequestException as e:
+            mylog.error(f"请求异常: {e}")
+            self.exl.write_exl_data(row=row, column=8, value="请求失败")
+            raise e
+        except ValueError as e:
+            mylog.error(f"响应解析失败: {e}, 响应内容: {response.text}")
+            self.exl.write_exl_data(row=row, column=8, value="响应解析失败")
+            raise e
+        mylog.info(f"*************************执行第{row - 1}条用例*************************")
+        mylog.info(f"期望返回: {expect}")
+        mylog.info(f"实际返回: {response_data}")
 
         try:
-            mylog.info("执行第{}条用例".format(row-1))
-            assert expect["code"] == response["code"]
-            assert expect["msg"] == response["msg"]
+            assert expect["code"] == response_data["code"]
+            assert expect["msg"] == response_data["msg"]
         except AssertionError as e:
             mylog.error("测试未通过")
             mylog.exception(e)
-            mylog.info(params)
+            mylog.info(f"请求参数: {params}")
             self.exl.write_exl_data(row=row, column=8, value="未通过")
             raise e
         else:

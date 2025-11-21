@@ -1,2 +1,0 @@
-INFO     mylog:test_cart.py:60 执行第1条用例
-INFO     mylog:test_cart.py:70 测试通过
